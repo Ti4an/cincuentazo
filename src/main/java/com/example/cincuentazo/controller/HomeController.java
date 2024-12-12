@@ -1,10 +1,13 @@
 package com.example.cincuentazo.controller;
 
+import com.example.cincuentazo.view.HomeView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+
+import java.io.IOException;
 
 public class HomeController {
 
@@ -35,7 +38,8 @@ public class HomeController {
     }
 
     @FXML
-    void onExitButton(ActionEvent event) {
+    void onExitButton(ActionEvent event) throws IOException {
+        HomeView.getInstance().close(); // Close the word input view
 
     }
 
