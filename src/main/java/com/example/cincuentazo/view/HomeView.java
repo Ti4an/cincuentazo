@@ -22,7 +22,12 @@ public class HomeView extends Stage {
     }
 
     public static HomeView getInstance() throws IOException {
-        return HomeView.HomeViewHolder.INSTANCE = new HomeView();
+        if(HomeViewHolder.INSTANCE== null){
+            return HomeView.HomeViewHolder.INSTANCE = new HomeView();
+        }else{
+            return HomeViewHolder.INSTANCE;
+        }
+
     }
 
     private static class HomeViewHolder {
