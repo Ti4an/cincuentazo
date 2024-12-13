@@ -19,7 +19,11 @@ public class DificultView extends Stage {
         this.show();
     }
     public static DificultView getInstance() throws IOException {
-        return DificultView.DificultViewHolder.INSTANCE = new DificultView();
+        if(DificultViewHolder.INSTANCE==null){
+            return DificultView.DificultViewHolder.INSTANCE = new DificultView();
+        }else{
+            return DificultViewHolder.INSTANCE;
+        }
     }
 
     private static class DificultViewHolder {

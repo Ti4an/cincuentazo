@@ -16,22 +16,19 @@ public class DificultController {
 
     @FXML
     void onOneDificult(ActionEvent event) throws IOException {
-        Stage stage = (Stage)this.button.getScene().getWindow();
-        stage.close();
+        DificultView.getInstance().close();
         GameView.getInstance();
     }
 
     @FXML
     void onTwoDificult(ActionEvent event) throws IOException {
-        Stage stage = (Stage)this.button.getScene().getWindow();
-        stage.close();
+        DificultView.getInstance().close();
         GameView.getInstance();
     }
 
     @FXML
     void onThreeDificult(ActionEvent event) throws IOException {
-        Stage stage = (Stage)this.button.getScene().getWindow();
-        stage.close();
+        DificultView.getInstance().close();
         GameView.getInstance();
     }
 

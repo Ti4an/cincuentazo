@@ -25,7 +25,11 @@ public class GameView extends Stage {
     }
 
     public static GameView getInstance() throws IOException {
-        return GameView.GameViewHolder.INSTANCE = new GameView();
+        if(GameView.GameViewHolder.INSTANCE==null){
+            return GameView.GameViewHolder.INSTANCE = new GameView();
+        }else{
+            return GameView.GameViewHolder.INSTANCE;
+        }
     }
 
     private static class GameViewHolder {
