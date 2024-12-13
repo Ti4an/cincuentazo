@@ -1,15 +1,22 @@
 package com.example.cincuentazo.controller;
 
+import com.example.cincuentazo.view.DificultView;
+import com.example.cincuentazo.view.HelpView;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HomeController {
 
     @FXML
     private Button onPlay;
+
 
     @FXML
     private Button onExit;
@@ -36,17 +43,21 @@ public class HomeController {
 
     @FXML
     void onExitButton(ActionEvent event) {
-
+        Stage stage = (Stage)this.cincuentazoImage.getScene().getWindow();
+        stage.close();
     }
 
     @FXML
-    void onHowButtton(ActionEvent event) {
-
+    void onHowButtton(ActionEvent event) throws IOException {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        HelpView.getInstance(stage);
     }
 
     @FXML
-    void onPlatButton(ActionEvent event) {
-
+    void onPlatButton(ActionEvent event) throws IOException {
+        Stage stage = (Stage)this.cincuentazoImage.getScene().getWindow();
+        stage.close();
+        DificultView.getInstance();
     }
 }
 
