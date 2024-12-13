@@ -12,16 +12,22 @@ import java.io.IOException;
 
 public class GameView extends Stage {
 
+    private GameController gameController;
 
     public GameView() throws IOException {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/com/example/cincuentazo/game-view.fxml"));
         Parent root = (Parent)loader.load();
+        this.gameController = (GameController)loader.getController();
         Scene scene = new Scene(root);
         //this.initStyle(StageStyle.UNDECORATED);
         this.setTitle("Cincuentazo");
         this.getIcons().add(new Image(this.getClass().getResourceAsStream("/com/example/cincuentazo/img/poker-table.png")));
         this.setScene(scene);
         this.show();
+    }
+
+    public GameController getGameController() {
+        return this.gameController;
     }
 
     public static GameView getInstance() throws IOException {

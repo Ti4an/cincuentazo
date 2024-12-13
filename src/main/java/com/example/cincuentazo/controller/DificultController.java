@@ -1,5 +1,6 @@
 package com.example.cincuentazo.controller;
 
+import com.example.cincuentazo.model.GameModel;
 import com.example.cincuentazo.view.DificultView;
 import com.example.cincuentazo.view.GameView;
 import javafx.fxml.FXML;
@@ -11,25 +12,34 @@ import java.io.IOException;
 
 // clase para cambiar la dificultad del juego
 public class DificultController {
+    int difficulty;
+
     @FXML
     private Button button;
 
     @FXML
     void onOneDificult(ActionEvent event) throws IOException {
         DificultView.getInstance().close();
-        GameView.getInstance();
+        GameModel gameModel = new GameModel();
+        gameModel.setDificulty(1);
+        GameView.getInstance().getGameController().setGameModel(gameModel);
     }
 
     @FXML
     void onTwoDificult(ActionEvent event) throws IOException {
         DificultView.getInstance().close();
-        GameView.getInstance();
+        GameModel gameModel = new GameModel();
+        gameModel.setDificulty(2);
+        GameView.getInstance().getGameController().setGameModel(gameModel);
     }
 
     @FXML
     void onThreeDificult(ActionEvent event) throws IOException {
         DificultView.getInstance().close();
-        GameView.getInstance();
+        GameModel gameModel = new GameModel();
+        gameModel.setDificulty(3);
+        GameView.getInstance().getGameController().setGameModel(gameModel);
+
     }
 
 }

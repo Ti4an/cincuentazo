@@ -1,8 +1,22 @@
 package com.example.cincuentazo.controller;
 
+import com.example.cincuentazo.model.GameModel;
 import javafx.fxml.FXML;
 
 public class GameController {
+
+    private GameController gameController;
+    private GameModel gameModel;
+
+    public GameController getGameController() {
+        return this.gameController;
+    }
+
+    public void setGameModel(GameModel gameModel) {
+        this.gameModel = gameModel;
+        int difficult = this.gameModel.getDificulty();
+        System.out.println(difficult);
+    }
    /*
     private int difficulty;
 
