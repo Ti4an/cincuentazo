@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-
+// clase para cambiar la dificultad del juego
 public class DificultController {
     @FXML
     private Button button;
