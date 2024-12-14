@@ -136,7 +136,7 @@ public class GameController {
             gameModel.getPlayerDeck().add(cardIndex, gameModel.getMainDeck().remove(0));
         }
 
-        // Actualizar las imágenes de los botones
+
         updatePlayerDeck();
     }
 
