@@ -13,11 +13,13 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Controller for the home screen of the game, handling the navigation and displaying game instructions.
+ */
 public class HomeController {
 
     @FXML
     private Button onPlay;
-
 
     @FXML
     private Button onExit;
@@ -27,7 +29,8 @@ public class HomeController {
 
     @FXML
     private ImageView cincuentazoImage;
-    String Rules = """
+
+    private String Rules = """
                 Objective:
                 Be the last player standing by avoiding the total sum of cards on the table exceeding 50 points.
                 
@@ -52,37 +55,56 @@ public class HomeController {
                 - The game ends when only one player remains. That player is the winner.
                 """;
 
-
+    /**
+     * Initializes the home screen, setting up the images for buttons and title.
+     */
     public void initialize() {
         Image image = new Image(getClass().getResourceAsStream("/com/example/cincuentazo/img/play.jpg"));
         ImageView imageView = new ImageView(image);
         onPlay.setGraphic(imageView);
+
         Image image2 = new Image(getClass().getResourceAsStream("/com/example/cincuentazo/img/howTo.jpg"));
         ImageView imageView2 = new ImageView(image2);
         onHow.setGraphic(imageView2);
+
         Image image3 = new Image(getClass().getResourceAsStream("/com/example/cincuentazo/img/exit.jpg"));
         ImageView imageView3 = new ImageView(image3);
         onExit.setGraphic(imageView3);
+
         Image image4 = new Image(getClass().getResourceAsStream("/com/example/cincuentazo/img/title.png"));
         cincuentazoImage.setImage(image4);
     }
 
+    /**
+     * Handles the exit button action, closing the home view.
+     *
+     * @param event The action event triggered by pressing the exit button.
+     * @throws IOException If an error occurs while closing the view.
+     */
     @FXML
     void onExitButton(ActionEvent event) throws IOException {
         HomeView.getInstance().close();
     }
 
+    /**
+     * Displays the game instructions in an alert box when the "How to play" button is pressed.
+     *
+     * @param event The action event triggered by pressing the "How to play" button.
+     */
     @FXML
     void onHowButtton(ActionEvent event) {
-        new AlertBox().InformationAlert("Cincuentazo", "HOW TO PLAY?",
-                Rules);
-
+        new AlertBox().InformationAlert("Cincuentazo", "HOW TO PLAY?", Rules);
     }
 
+    /**
+     * Navigates to the difficulty selection screen when the "Play" button is pressed.
+     *
+     * @param event The action event triggered by pressing the play button.
+     * @throws IOException If an error occurs while navigating to the difficulty view.
+     */
     @FXML
     void onPlatButton(ActionEvent event) throws IOException {
         HomeView.getInstance().close();
         DificultView.getInstance();
     }
 }
-
