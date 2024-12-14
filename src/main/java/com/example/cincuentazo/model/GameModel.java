@@ -65,4 +65,7 @@ public class GameModel {
     public ArrayList<ArrayList<Card>> machinesDeck() {
         return machinesDeck;
     }
+    public Deck getDeck() {
+        return deck;
+    }
 }

@@ -19,7 +19,7 @@ public class GameView extends Stage {
         Parent root = (Parent)loader.load();
         this.gameController = (GameController)loader.getController();
         Scene scene = new Scene(root);
-        //this.initStyle(StageStyle.UNDECORATED);
+        this.initStyle(StageStyle.UNDECORATED);
         this.setTitle("Cincuentazo");
         this.getIcons().add(new Image(this.getClass().getResourceAsStream("/com/example/cincuentazo/img/poker-table.png")));
         this.setScene(scene);
