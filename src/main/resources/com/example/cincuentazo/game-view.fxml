@@ -11,9 +11,9 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="916.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cincuentazo.controller.GameController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="435.0" prefWidth="902.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.cincuentazo.controller.GameController">
    <children>
-      <GridPane alignment="CENTER" layoutX="142.0" layoutY="105.0" prefHeight="226.0" prefWidth="384.0" style="-fx-background-color: green; -fx-border-color: black; -fx-background-radius: 200; -fx-border-radius: 200; -fx-border-width: 8;">
+      <GridPane alignment="CENTER" layoutX="143.0" layoutY="88.0" prefHeight="226.0" prefWidth="384.0" style="-fx-background-color: green; -fx-border-color: black; -fx-background-radius: 200; -fx-border-radius: 200; -fx-border-width: 8;">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
           <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -51,31 +51,31 @@
             </Button>
          </children>
       </VBox>
-      <HBox alignment="CENTER" layoutX="180.0" layoutY="321.0" prefHeight="100.0" prefWidth="309.0">
+      <HBox alignment="CENTER" layoutX="181.0" layoutY="321.0" prefHeight="100.0" prefWidth="309.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#OnCardOne" prefHeight="60.0" prefWidth="50.0">
+            <Button fx:id="cardButton1" mnemonicParsing="false" onAction="#OnCardOne" prefHeight="83.0" prefWidth="64.0">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#OnCardTwo" prefHeight="60.0" prefWidth="50.0">
+            <Button fx:id="cardButton2" mnemonicParsing="false" onAction="#OnCardTwo" prefHeight="83.0" prefWidth="64.0">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#OnCardThree" prefHeight="60.0" prefWidth="50.0">
+            <Button fx:id="cardButton3" mnemonicParsing="false" onAction="#OnCardThree" prefHeight="83.0" prefWidth="64.0">
                <HBox.margin>
                   <Insets right="10.0" />
                </HBox.margin>
             </Button>
-            <Button mnemonicParsing="false" onAction="#OnCardFour" prefHeight="60.0" prefWidth="50.0" />
+            <Button fx:id="cardButton4" mnemonicParsing="false" onAction="#OnCardFour" prefHeight="83.0" prefWidth="64.0" />
          </children>
          <opaqueInsets>
             <Insets />
          </opaqueInsets>
       </HBox>
-      <ImageView fitHeight="100.0" fitWidth="120.0" layoutX="14.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="85.0" fitWidth="120.0" layoutX="275.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-      <ImageView fitHeight="100.0" fitWidth="97.0" layoutX="536.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="maquinaUno" fitHeight="100.0" fitWidth="120.0" layoutX="14.0" layoutY="130.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="maquinaDos" fitHeight="85.0" fitWidth="120.0" layoutX="275.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView fx:id="maquinaTres" fitHeight="100.0" fitWidth="97.0" layoutX="536.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true" />
    </children>
 </AnchorPane>

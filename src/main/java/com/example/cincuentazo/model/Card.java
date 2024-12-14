@@ -15,7 +15,7 @@ public class Card {
         this.imagen = cargarImagen(valor, palo);
     }
 
-    private int calcularPuntaje(String valor) {
+    public int calcularPuntaje(String valor) {
         switch (valor) {
             case "A": return 1; // op de valor 10
             case "J": return -10;

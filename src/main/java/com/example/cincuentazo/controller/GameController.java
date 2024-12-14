@@ -11,7 +11,7 @@ import javafx.scene.image.ImageView;
 import java.util.ArrayList;
 
 public class GameController {
-
+    private int puntosTotales = 0;
     private GameController gameController;
     private GameModel gameModel;
     int difficult;
@@ -33,6 +33,19 @@ public class GameController {
 
     @FXML
     private Button cardButton4;
+
+    @FXML
+    private ImageView maquinaDos;
+
+    @FXML
+    private ImageView maquinaTres;
+
+    @FXML
+    private ImageView maquinaUno;
+
+    @FXML
+    private Label puntos;
+
 
 
     public void setGameModel(GameModel gameModel) {
@@ -56,8 +69,8 @@ public class GameController {
 
     private void setCardImage(Button button, Card card) {
         ImageView imageView = new ImageView(card.cargarImagen(card.getValor(), card.getPalo()));
-        imageView.setFitWidth(100); // Ajusta el ancho de la imagen
-        imageView.setFitHeight(150); // Ajusta el alto de la imagen
+        imageView.setFitWidth(64); // Ajusta el ancho de la imagen
+        imageView.setFitHeight(83); // Ajusta el alto de la imagen
         button.setGraphic(imageView); // Asigna la imagen al botón
     }
 
@@ -94,6 +107,13 @@ public class GameController {
         Card playedCard = gameModel.getPlayerDeck().remove(cardIndex);
         gameModel.getTableDeck().add(playedCard);
 
+        // Mostrar la carta jugada en el ImageView "cardview"
+        cardview.setImage(playedCard.cargarImagen(playedCard.getValor(), playedCard.getPalo()));
+        cardview.setFitWidth(64); // Ajusta el ancho del ImageView (opcional)
+        cardview.setFitHeight(83); // Ajusta el alto del ImageView (opcional)
+        cardview.setPreserveRatio(true); // Mantiene las proporciones de la imagen
+
+
         // Tomar una nueva carta del mazo
         if (!gameModel.getMainDeck().isEmpty()) {
             gameModel.getPlayerDeck().add(cardIndex, gameModel.getMainDeck().remove(0));
@@ -102,6 +122,7 @@ public class GameController {
         // Actualizar las imágenes de los botones
         updatePlayerDeck();
     }
+
 
     @FXML
     void OnExitButton(ActionEvent event) {
