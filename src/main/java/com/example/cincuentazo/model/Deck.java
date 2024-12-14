@@ -18,7 +18,7 @@ public class Deck {
     // Método para inicializar el mazo con todas las cartas estándar
     private void initializeDeck() {
         String[] values = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"}; // Valores de las cartas
-        String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"}; // Palos de las cartas
+        String[] suits = {"corazon", "diamante", "trebol", "pica"}; // Palos de las cartas
 
         // Itera sobre todos los palos y valores para crear las cartas
         for (String suit : suits) {
@@ -50,5 +50,9 @@ public class Deck {
     // Método para verificar cuántas cartas quedan en el mazo
     public int remainingCards() {
         return cards.size(); // Devuelve el número de cartas restantes
+    }
+
+    public List<Card> getCards() {
+        return cards;
     }
 }

@@ -26,7 +26,7 @@ public class Card {
         }
     }
 
-    private Image cargarImagen(String valor, String palo) {
+    public Image cargarImagen(String valor, String palo) {
         String ruta = "/com/example/cincuentazo/cards/" + valor + "-" + palo.toLowerCase() + ".png";
         return new Image(getClass().getResourceAsStream(ruta));
     }
